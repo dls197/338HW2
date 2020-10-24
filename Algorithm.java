@@ -161,27 +161,27 @@ public class Algorithm {
 		System.out.println("Runtime is " + (clock3et - clock3st) + " nanoseconds");
 
 		System.out.println("\nResult comparisons:");
-		System.out.println("\nequiprobable clock and equiprobable fifo faults: " + clock1.getNumFault()/fifo1.getNumFault());
-		System.out.println("equiprobable clock and equiprobable fifo runtime: " + (clock1et - clock1st)/(fifo1et - fifo1st));
-		System.out.println("e\nxponential clock and exponential fifo faults: "+ clock2.getNumFault()/fifo2.getNumFault());
-		System.out.println("exponential clock and exponential fifo runtime: " + (clock2et - clock2st)/(fifo2et - fifo2st));
-		System.out.println("\nbiased clock and biased fifo faults: " + clock3.getNumFault()/fifo3.getNumFault());
-		System.out.println("biased clock and biased fifo runtime: " + (clock3et - clock3st)/(fifo3et - fifo3st));
+		System.out.println("\nequiprobable clock and equiprobable fifo faults: " + (double)clock1.getNumFault()/(double)fifo1.getNumFault());
+		System.out.println("equiprobable clock and equiprobable fifo runtime: " + (double)(clock1et - clock1st)/(double)(fifo1et - fifo1st));
+		System.out.println("\nexponential clock and exponential fifo faults: "+ (double)clock2.getNumFault()/(double)fifo2.getNumFault());
+		System.out.println("exponential clock and exponential fifo runtime: " + (double)(clock2et - clock2st)/(double)(fifo2et - fifo2st));
+		System.out.println("\nbiased clock and biased fifo faults: " + (double)clock3.getNumFault()/(double)fifo3.getNumFault());
+		System.out.println("biased clock and biased fifo runtime: " + (double)(clock3et - clock3st)/(double)(fifo3et - fifo3st));
 
-		System.out.println("\nbiased clock and exponential clock faults: " + clock3.getNumFault()/clock2.getNumFault());
-		System.out.println("exponential clock and equiprobable clock faults: " + clock2.getNumFault()/clock1.getNumFault());
-		System.out.println("biased clock and equiprobable clock faults: " + clock3.getNumFault()/clock1.getNumFault());
+		System.out.println("\nbiased clock and exponential clock faults: " + (double)clock3.getNumFault()/(double)clock2.getNumFault());
+		System.out.println("exponential clock and equiprobable clock faults: " + (double)clock2.getNumFault()/(double)clock1.getNumFault());
+		System.out.println("biased clock and equiprobable clock faults: " + (double)clock3.getNumFault()/(double)clock1.getNumFault());
 
-		System.out.println("\nbiased fifo and exponential fifo faults: " + fifo3.getNumFault()/fifo2.getNumFault());
-		System.out.println("exponential fifo and equiprobable fifo faults: " + fifo2.getNumFault()/fifo1.getNumFault());
-		System.out.println("biased fifo and equiprobable fifo faults: " + fifo3.getNumFault()/fifo1.getNumFault());
+		System.out.println("\nbiased fifo and exponential fifo faults: " + (double)fifo3.getNumFault()/(double)fifo2.getNumFault());
+		System.out.println("exponential fifo and equiprobable fifo faults: " + (double)fifo2.getNumFault()/(double)fifo1.getNumFault());
+		System.out.println("biased fifo and equiprobable fifo faults: " + (double)fifo3.getNumFault()/(double)fifo1.getNumFault());
 
-		System.out.println("\nbiased clock and exponential clock runtime: " + (clock3et - clock3st)/(clock2et - clock2st));
-		System.out.println("exponential clock and equiprobable clock runtime: " + (clock2et - clock2st)/(clock1et - clock1st));
-		System.out.println("biased clock and equiprobable clock runtime: " + (clock3et - clock3st)/(clock1et - clock1st));
+		System.out.println("\nbiased clock and exponential clock runtime: " + (double)(clock3et - clock3st)/(double)(clock2et - clock2st));
+		System.out.println("exponential clock and equiprobable clock runtime: " + (double)(clock2et - clock2st)/(double)(clock1et - clock1st));
+		System.out.println("biased clock and equiprobable clock runtime: " + (double)(clock3et - clock3st)/(double)(clock1et - clock1st));
 
-		System.out.println("\nbiased fifo and exponential fifo runtime: " + (fifo3et - fifo3st)/(fifo2et - fifo2st));
-		System.out.println("exponential fifo and equiprobable fifo runtime: " + (fifo2et - fifo2st)/(fifo1et - fifo1st));
-		System.out.println("biased fifo and equiprobable fifo runtime: " + (fifo3et - fifo3st)/(fifo1et - fifo1st));
+		System.out.println("\nbiased fifo and exponential fifo runtime: " + (double)(fifo3et - fifo3st)/(double)(fifo2et - fifo2st));
+		System.out.println("exponential fifo and equiprobable fifo runtime: " + (double)(fifo2et - fifo2st)/(double)(fifo1et - fifo1st));
+		System.out.println("biased fifo and equiprobable fifo runtime: " + (double)(fifo3et - fifo3st)/(double)(fifo1et - fifo1st));
 	}
 }
